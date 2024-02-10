@@ -1,0 +1,156 @@
+{
+	"info": {
+		"_postman_id": "71711248-3bdf-456b-a99b-48a5a50e1fd1",
+		"name": "hido",
+		"schema": "https://schema.getpostman.com/json/collection/v2.0.0/collection.json",
+		"_exporter_id": "7847540"
+	},
+	"item": [
+		{
+			"name": "http://localhost:3001/api/cars?id=1",
+			"request": {
+				"method": "GET",
+				"header": [],
+				"url": {
+					"raw": "http://localhost:3001/api/cars?id=1",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "3001",
+					"path": [
+						"api",
+						"cars"
+					],
+					"query": [
+						{
+							"key": "id",
+							"value": "1"
+						}
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "http://localhost:3001/api/cars?id=1",
+			"request": {
+				"method": "DELETE",
+				"header": [],
+				"url": {
+					"raw": "http://localhost:3001/api/cars?id=1",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "3001",
+					"path": [
+						"api",
+						"cars"
+					],
+					"query": [
+						{
+							"key": "id",
+							"value": "1"
+						}
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "http://localhost:3001/api/cars",
+			"request": {
+				"auth": {
+					"type": "bearer",
+					"bearer": {
+						"token": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJuYW1lIjoidGVzdCIsIklkIjoxLCJpYXQiOjE3MDc1NzgzODR9.nZabqLP9F5FW8p8hi6zeqyNIcMa4P1R0MkwdVp9xTq0"
+					}
+				},
+				"method": "PUT",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "{\n    \"id\": 1,\n    \"modelYear\": \"2000\"\n\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": "http://localhost:3001/api/cars"
+			},
+			"response": []
+		},
+		{
+			"name": "http://localhost:3001/api/auth",
+			"request": {
+				"method": "GET",
+				"header": [],
+				"url": "http://localhost:3001/api/auth"
+			},
+			"response": []
+		},
+		{
+			"name": "http://localhost:3001/api/cars/list?page=1&pageSize=10",
+			"request": {
+				"auth": {
+					"type": "bearer",
+					"bearer": {
+						"token": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJzdWIiOiJheml6IiwibmFtZSI6ImFiZHVsYXppeiIsImVtYWlsIjoiY2NjY0Bob3RtYWlsLmNvbSIsIk1vYmlsZSI6IjA1NDAyMTcxNDIiLCJleHAiOjE2NzY5NzM3ODEsImlzcyI6Ikp3dFNsbiIsImF1ZCI6Ikp3dFVzZXJzIn0.7xdJrEVMLSVMzthTnn4D91NhUUdt0rA_SVWmEt_yrjk"
+					}
+				},
+				"method": "GET",
+				"header": [],
+				"url": {
+					"raw": "http://localhost:3001/api/cars/list?page=1&pageSize=10",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "3001",
+					"path": [
+						"api",
+						"cars",
+						"list"
+					],
+					"query": [
+						{
+							"key": "page",
+							"value": "1"
+						},
+						{
+							"key": "pageSize",
+							"value": "10"
+						}
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "http://localhost:3001/api/cars",
+			"request": {
+				"auth": {
+					"type": "bearer",
+					"bearer": {
+						"token": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJuYW1lIjoidGVzdCIsIklkIjoxLCJpYXQiOjE3MDc1OTA5ODJ9._zZrGxqcm3BqW4t2ELY01zeAve5A57b1HTXZCLpZupM"
+					}
+				},
+				"method": "POST",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "{\n    \"modelYear\": \"2021\",\n    \"vinNumber\" : \"fdk023sadfdf0sdf3000\",\n    \"manufacturingDate\" :\"2022-11-30T11:21:44.000Z\",\n    \"modelName\" : \"sti\",\n    \"manufacture\" : 1200\n\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": "http://localhost:3001/api/cars"
+			},
+			"response": []
+		}
+	]
+}
