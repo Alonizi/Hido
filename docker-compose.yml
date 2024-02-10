@@ -1,0 +1,21 @@
+version: '3.8'
+services:
+  api:
+    container_name: api
+    build: .
+    ports:
+      - 3001:3000
+    depends_on:
+      - postgres
+    environment:
+      DATABASE_URL: "postgresql://postgres:1234@postgres:5432/postgres?schema=public"
+
+  postgres:
+    container_name: postgres
+    image: postgres
+    ports:
+      - '5433:5432'
+    environment:
+      POSTGRES_USER: "postgres"
+      POSTGRES_PASSWORD: "1234"
+      POSTGRES_DB: "postgres"
